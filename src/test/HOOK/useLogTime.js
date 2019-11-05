@@ -5,9 +5,9 @@ function useLogTime(option = { log: true, time: true }) {
 
   //日志相关
   useEffect(() => {
-    option.log && console.log("组件渲染完成----");
+    option.log && console.log("HOOKS组件渲染完成~");
     return () => {
-      option.log && console.log("组件即将卸载----");
+      option.log && console.log("HOOKS组件即将卸载~");
     };
   },[]);
 

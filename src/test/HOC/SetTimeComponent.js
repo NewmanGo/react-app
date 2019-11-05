@@ -4,8 +4,8 @@ import logTimeHOC from './logTimeHOC'
 class InnerSetTimeComponent extends React.Component {
   render() {
     return (
-      <div>
-        <div>我是计时组件</div>
+      <div className="comp">
+        <div>我是计时组件(HOC)</div>
         <span>{`我显示了${this.props.time}s`}</span>
       </div>
     );
