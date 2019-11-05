@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import LogTimeComponent from "./test/LogTimeComponent";
+import LogComponent from "./test/HOOK/LogComponent";
+import SetTimeComponent from "./test/HOOK/SetTimeComponent";
+import EffectBug from "./test/BUG/EffectBug";
+
+import { Tabs } from "antd";
+
+const { TabPane } = Tabs;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs defaultActiveKey="1">
+        <TabPane tab="Tab 1" key="1">
+          Content of Tab Pane 1
+        </TabPane>
+        <TabPane tab="hooks" key="2">
+          <div>
+            <LogComponent />
+            <SetTimeComponent />
+          </div>
+        </TabPane>
+        <TabPane tab="常见错误" key="3">
+          <EffectBug />
+        </TabPane>
+      </Tabs>
     </div>
   );
 }
