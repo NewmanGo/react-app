@@ -19,9 +19,6 @@ function logTimeHOC(WrappedComponent, options = { time: true, log: true }) {
 
       options.log && console.log("HOC组件被渲染了~"); //日志相关
     }
-    componentDidUpdate() {
-      options.log && console.log("HOC组件被渲染了~"); //日志相关
-    }
     componentWillUnmount() {
       clearInterval(this.timer); // 计时相关
       options.log && console.log("HOC组件即将卸载~"); //日志相关

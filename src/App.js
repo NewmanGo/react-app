@@ -13,11 +13,11 @@ import { Tabs } from "antd";
 const { TabPane } = Tabs;
 
 function App() {
-  const [activeKey, setActiveKey] = useState('1');
+  const [activeKey, setActiveKey] = useState('0');
   return (
     <div className="App">
       <Tabs
-        defaultActiveKey="1"
+        defaultActiveKey="0"
         animated={false}
         activeKey={activeKey}
         onChange={setActiveKey}
