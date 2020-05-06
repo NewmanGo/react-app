@@ -15,11 +15,11 @@ class LogTimeComponent extends React.Component {
       });
     }, 1000);
 
-    console.log("待复用组件被渲染了~"); //日志相关
+    console.log("组件被渲染了~"); //日志相关
   }
   componentWillUnmount() {
     clearInterval(this.timer); // 计时相关
-    console.log("待复用组件即将卸载~"); //日志相关
+    console.log("组件即将卸载~"); //日志相关
   }
   render() {
     return (
