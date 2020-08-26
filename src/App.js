@@ -1,50 +1,27 @@
 import React, { useState } from "react";
-import "./App.css";
-import LogTimeComponent from "./test/LogTimeComponent";
-import LogComponentHoc from "./test/HOC/LogComponent";
-import SetTimeComponentHoc from "./test/HOC/SetTimeComponent";
-import LogComponentHooks from "./test/HOOK/LogComponent";
-import SetTimeComponentHooks from "./test/HOOK/SetTimeComponent";
-import EffectBug from "./test/BUG/EffectBug";
-import "antd/dist/antd.css";
-
-import { Tabs } from "antd";
-
-const { TabPane } = Tabs;
+import "./App.scss";
 
 function App() {
-  const [activeKey, setActiveKey] = useState('1');
   return (
-    <div className="App">
-      <Tabs
-        defaultActiveKey="1"
-        animated={false}
-        activeKey={activeKey}
-        onChange={setActiveKey}
-      >
-        <TabPane tab="待复用组件" key="0"></TabPane>
-        <TabPane tab="hoc" key="1"></TabPane>
-        <TabPane tab="hooks" key="2"></TabPane>
-        <TabPane tab="常见错误" key="3"></TabPane>
-      </Tabs>
-      {activeKey == 0 && (
-        <div>
-          <LogTimeComponent/>
+    <div className="container">
+      <div className="goods-earn">
+        <span className="label">好友送你</span>
+        <span className="unit">¥</span>
+        <span className="value">2.45</span>
+      </div>
+      <div className="goods-content">
+        <div className="goods-img-wrap">
+          <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" class="goods-img" alt="" />
         </div>
-      )}
-      {activeKey == 1 && (
-        <div>
-          <LogComponentHoc />
-          <SetTimeComponentHoc />
+        <div className="goods-right">
+          <span className="right-des">购买到手</span>
+          <span className="right-price">
+            <span className="unit">¥</span>
+            <span className="value">282.45</span>
+          </span>
         </div>
-      )}
-      {activeKey == 2 && (
-        <div>
-          <LogComponentHooks />
-          <SetTimeComponentHooks />
-        </div>
-      )}
-      {activeKey == 3 && <EffectBug />}
+      </div>
+      <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" class="goods-pop-img" alt="" />
     </div>
   );
 }
