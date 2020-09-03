@@ -11,7 +11,7 @@ function App() {
       </div>
       <div className="goods-content">
         <div className="goods-img-wrap">
-          <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" class="goods-img" alt="" />
+          <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" className="goods-img" alt="" />
         </div>
         <div className="goods-right">
           <span className="right-des">购买到手</span>
@@ -21,7 +21,7 @@ function App() {
           </span>
         </div>
       </div>
-      <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" class="goods-pop-img" alt="" />
+      <img src="https://su.yzcdn.cn/public_files/431f06ceec0e9e6b92be0173238fbe8d.png" className="goods-pop-img" alt="" />
     </div>
   );
 }
