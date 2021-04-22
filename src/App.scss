@@ -6,43 +6,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 8px;
+  padding: 8px;
   box-sizing: border-box;
   position: relative;
 }
 
 .container .goods-earn {
-  display: flex;
-  align-items: flex-end;
-  color: #ffffff;
-  margin-bottom: 5px;
-}
-
-.container .goods-earn .label {
+  margin-bottom: 9px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  margin-right: 4px;
-}
-
-.container .goods-earn .unit {
-  font-weight: 600;
-  font-size: 18px;
-  margin-right: 4px;
-  line-height: 16px;
-}
-
-.container .goods-earn .value {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 18px;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .container .goods-content {
   background: #ffffff;
   border-radius: 4px;
-  width: 210px;
-  height: 144px;
+  width: 214px;
+  height: 132px;
   padding: 6px;
   padding-right: 0;
   box-sizing: border-box;
@@ -51,7 +31,7 @@
 
 .container .goods-content .goods-img-wrap {
   width: 110px;
-  height: 100px;
+  height: 120px;
   position: relative;
   border-radius: 4px;
   overflow: hidden;
@@ -67,7 +47,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-top: 18px;
+  margin-top: 14px;
   align-items: center;
 }
 
@@ -75,23 +55,59 @@
   font-size: 14px;
   color: #323233;
   line-height: 16px;
-  margin-bottom: 6px;
 }
 
-.container .goods-content .goods-right .unit,
-.container .goods-content .goods-right .value {
+.container .goods-content .goods-right .right-price {
+  margin-bottom: 4px;
+}
+
+.container .goods-content .goods-right .right-price .unit,
+.container .goods-content .goods-right .right-price .value {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   color: #ff4444;
 }
 
-.container .goods-content .goods-right .unit {
+.container .goods-content .goods-right .right-price .unit {
   color: #ff4444;
+  font-size: 14px;
+  margin-right: 1px;
 }
 
-.container .goods-pop-img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.container .goods-content .goods-right .right-shen {
+  height: 14px;
+  padding: 0 5px;
+  background: rgba(250, 25, 25, 0.15);
+  border-radius: 7px;
+  font-size: 10px;
+  color: #fa1919;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container .goods-content .goods-right .right-shen .label {
+  margin-right: 2px;
+}
+
+.container .goods-content .goods-right .right-qiang {
+  background-image: linear-gradient(180deg, #ff4f00 0%, #e00000 100%);
+  border-radius: 17px;
+  width: 86px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container .goods-content .goods-right .mb14 {
+  margin-bottom: 14px;
+}
+
+.container .goods-content .goods-right .right-bo {
+  text-decoration: line-through;
+  font-size: 12px;
+  color: #969799;
+  line-height: 14px;
 }
