@@ -3,7 +3,7 @@ const sleep = (delay) => {
   while (Date.now() - start <= delay) {}
 };
 
-const during = 1000
+const during = 10
 
 const taskQueue = [
   () => {
@@ -32,13 +32,14 @@ const workloop = (deadline) => {
   console.log(`此帧的剩余时间为: ${deadline.timeRemaining()}`);
   // 如果此帧剩余时间大于0或者已经到了定义的超时时间（上文定义了timeout时间为1000，到达时间时必须强制执行），且当时存在任务，则直接执行这个任务
   // 如果没有剩余时间，则应该放弃执行任务控制权，把执行权交还给浏览器
+  console.log(`此帧任务循环开始`);
   while (
     (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
     taskQueue.length > 0
   ) {
     performUnitWork();
   }
-
+  console.log(`此帧任务循环结束`);
   // 如果还有未完成的任务，继续调用requestIdleCallback申请下一个时间片
   if (taskQueue.length > 0) {
     window.requestIdleCallback(workloop, { timeout: 1000 });

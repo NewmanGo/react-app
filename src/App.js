@@ -24,10 +24,6 @@ class App extends Component {
     }, 1000);
   }
 
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
-  }
-
   render() {
     return (
       <div className="container">
